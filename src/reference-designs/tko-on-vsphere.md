@@ -8,6 +8,8 @@ The following reference design is based on the architecture and components descr
 
 ![Tanzu for Kubernetes Operations components](img/tko-on-vsphere/TKO-Ref-Arch.jpg)
 
+illegal change
+
 ## Supported Component Matrix
 
 The validated Bill of Materials that can be used to install Tanzu Kubernetes Grid on your vSphere with NSX-T environment is as follows:
