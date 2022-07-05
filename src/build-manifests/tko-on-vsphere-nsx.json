@@ -1,0 +1,23 @@
+[
+  "intro_tko-on-vsphere-nsxt",
+  "support_matrix_tko-on-vsphere-common",
+  "components_tko-on-vsphere-common",
+  "storage_vsphere-common",
+  "networking_tko-on-vsphere-common",
+  "networking_tko-on-vsphere-nsxt",
+  "nsx_alb_tko-on-vsphere-common",
+  "network_architecture_tko-on-vsphere-nsxt",
+  "networking_subnets_tko-on-vsphere-common",
+  "networking_firewall_tko-on-vsphere-common",
+  "install_experience_tko-on-vsphere-common",
+  "recommendations_nsx_alb_tko-on-vsphere-common",
+  "recommendations_networking_tko-on-vsphere-nsxt",
+  "recommendations_tkg_tko-on-vsphere-common",
+  "ingress_routing_tko-on-vsphere-common",
+  "registry_common",
+  "monitoring_common",
+  "logging_common",
+  "saas_integration_common",
+  "appendix_tko-on-vsphere-common",
+  "summary_tko-on-vsphere-common"
+]

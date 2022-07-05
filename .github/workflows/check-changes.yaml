@@ -1,0 +1,46 @@
+name: change changes
+on: [push]
+
+jobs:
+  check-changes:
+    runs-on: ubuntu-latest
+    name: check changes
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.6
+    - name: Run script
+      run: python scripts/compile_docs.py
+    - name: Check for uncommitted changes
+      id: check-changes
+      run: |
+        function check_uncommitted_changes() {
+          status=$(git status --porcelain)
+          if [ -n "$status" ]; then
+            status="${status//'%'/'%25'}"
+            status="${status//$'\n'/'%0A'}"
+            status="${status//$'\r'/'%0D'}"
+            echo "$status"
+            exit 1
+          else
+            echo ""
+            exit 0
+          fi
+        }
+
+        echo ::set-output name=changes::$(check_uncommitted_changes)
+
+    - name: Show files changed
+      if: steps.check-changes.outputs.changes != ''
+      run: |
+        echo "Running the compile script has created changes to the reference architectures"
+        echo -e "Check CONTRIBUTING.md for instructions how to ensure your commit is compiled\n"
+        echo "The following files were changed:"
+        echo "$CHANGES"
+        exit 1
+
+      env:
+        CHANGES: ${{ steps.check-changes.outputs.changes }}
