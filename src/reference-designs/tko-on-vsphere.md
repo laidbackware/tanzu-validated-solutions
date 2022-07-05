@@ -8,7 +8,7 @@ The following reference design is based on the architecture and components descr
 
 ![Tanzu for Kubernetes Operations components](img/tko-on-vsphere/TKO-Ref-Arch.jpg)
 
-illegal change
+illegal change another
 
 ## Supported Component Matrix
 
