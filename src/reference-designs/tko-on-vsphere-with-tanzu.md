@@ -89,7 +89,7 @@ Here are some recommendations for using namespaces in a vSphere with Tanzu envir
 |VMware vCenter (VCSA)|7.0 U3|
 |NSX Advanced Load Balancer|20.1.7|
 
-## vSphere with Tanzu Storage
+## vSphere with Tanzu Storage blah blah 
 
 vSphere with Tanzu integrates with shared datastores available in the vSphere infrastructure. The following types of shared datastores are supported:
 
