@@ -17,12 +17,12 @@ def main():
     rendered_sections = []
     
     for section in manifest:
-      with open("{}/{}.md".format(component_dir, section), "r") as section_file:
+      with open(os.path.join(component_dir, f"{section}.md"), "r") as section_file:
         rendered_sections.append(section_file.read().rstrip("\n") + "\n\n")
     
     rendered_markdown = number_figures("".join(rendered_sections))
 
-    with open("{}/{}.md".format(ref_arch_dir, ref_arch_name), 'w') as output_file:
+    with open(os.path.join(ref_arch_dir, f"{ref_arch_name}.md"), 'w') as output_file:
       output_file.write(rendered_markdown)    
 
 def decode_json(file_name):
